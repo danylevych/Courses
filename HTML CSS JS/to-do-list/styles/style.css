@@ -1,0 +1,75 @@
+ul {
+    padding-left: 0;
+}
+    
+    
+li {
+    list-style-type: none;
+    background-color: #eee;
+    border: 1px solid #c3c3c3;
+    padding: 10px 0px 10px 5px;
+    font-size: 20px;
+}
+
+.done {
+    border-radius: 7px;
+    background-color: lightgreen;
+}
+
+.remove {
+    border-radius: 7px;
+    background-color: red;
+}
+
+.finished {
+    color: white;
+    border-radius: 7px;
+    background-color: grey;
+}
+
+.important {
+    color: white;
+    border-radius: 7px;
+    background-color: lightblue;
+}
+
+.importantTask {
+    background-color: rgb(149, 188, 201);
+}
+
+li.finished span{
+    text-decoration: line-through;
+}
+
+    
+input[type="text"] {
+    font-size: 18px;
+    width: 94%;
+    padding: 10px;
+}
+    
+input[type="button"] {
+    font-size: 1.2em;
+    margin: -6px 4px 0px 0px;
+}
+    
+#addButton {
+    padding: 10px;
+}
+    
+.yellowbackground {
+    padding: 2px 10px 2px 10px;
+    margin: 5px 0px 5px 0px;
+    background-color: yellow;
+    width: fit-content;
+    display: none;
+}
+    
+    
+#divabout {
+    padding: 2px 10px 2px 10px;
+    margin: 5px 0px 5px 0px;
+    background-color: yellow;
+    width: fit-content;
+    display: none;
+}

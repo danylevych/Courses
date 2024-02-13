@@ -1,0 +1,35 @@
+h1 {
+    font-size: 5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blueviolet;
+}
+
+div {
+    padding: 0;
+    padding-left: 15px;
+
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: darkgoldenrod;
+    border: 3px solid darkgray;
+    width: 410px;
+    border-radius: 10px;
+    background-color: rgb(109, 230, 155);
+}
+
+.darkColor {
+    background-color: rgba(0, 0, 0, 0.288);
+}
+.brightColor {
+    background-color: rgba(206, 89, 89, 0.288);
+}
+
+button {
+    width: 250px;
+    font-size: 2em;
+    font-weight: bold;
+    border: 5px solid lightgray;
+    border-radius: 10px;
+}

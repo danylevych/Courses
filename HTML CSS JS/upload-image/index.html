@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload image</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Upload and Display Image</h1>
+    </header>
+
+    <main>
+        <canvas id="foregroundImageArea"></canvas>
+        <canvas id="backgroundImageArea"></canvas>
+        <br>
+        <input id="uploadButtonForeground" type="file" multiple="false" accept="image/*" onchange="uploadForeground()">
+        <br>
+        <input id="uploadButtonBackground" type="file" multiple="false" accept="image/*" onchange="uploadBackground()">
+        <br>
+        <button onclick="combineImage()">Combine Images</button>
+        <br>
+        <button onclick="clearCanvases()">Clear Canvases</button>
+    </main>
+</body>
+</html>

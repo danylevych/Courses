@@ -1,0 +1,75 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+body {
+    background-color: #6bd46b;
+}
+
+header {
+    padding: 25px;
+    background-color: lightgreen;
+    border-radius: 3px;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+hr {
+    border: 4px solid #9ad19a;
+    border-radius: 2px;
+}
+
+canvas {
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="file"]::file-selector-button {
+    font-weight: bold;
+    background-color: rgb(160, 241, 160);;
+    border: 2px solid rgb(107, 235, 107);
+    border-radius: 3px;
+}
+
+input[type="file"]::file-selector-button:hover {
+    font-weight: bold;
+    background-color: rgba(67, 235, 67, 0.432);;
+    border-radius: 3px;
+}
+
+button {
+    font-weight: bold;
+    background-color: rgb(160, 241, 160);;
+    border: 2px solid rgb(107, 235, 107);
+    border-radius: 3px;
+}
+
+button:hover {
+    font-weight: bold;
+    background-color: rgba(67, 235, 67, 0.432);;
+    border-radius: 3px;
+}
+
+.centerColomn {
+    display: flex;
+    justify-content: center;
+}
+
+.centerColomn button {
+    margin: 5px; /* Додайте потрібний відступ між кнопками */
+    display: inline-block; /* Робить елементи блоків, але зберігає розташування в одному рядку */
+}
+.centerAlign {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Paint</title>
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/scripts.js"></script>
+
+</head>
+<body onload="init()">
+    <header>
+        <h1>Paint your own picture</h1>
+    </header>
+
+    <main>
+        <label>Set Width: </label>
+        <input id="widthText" type="text" value="300" onchange="setWidth(this.value)">
+        <label>Set Height: </label>
+        <input id="heightText" type="text" value="150" onchange="setHeight(this.value)">
+
+        <br>
+        <canvas id="paintingArea"
+        onmousedown="startPainting()"
+        onmouseup="endPainting()"
+        onmousemove="doPaint(event.offsetX, event.offsetY)"></canvas>
+
+        <br>
+        <label>Brush Color: </label>
+        <input id="colorSelector" type="color" value="#FFF" onchange="changeBrushColor()">
+        <label>Brush Size: </label>
+        <input id="brushSize" type="range" min="1" max="100" value="1" onchange="changeBrushSize()">
+        <label id="brushSizeLabel">1</label>
+
+        <br>
+        <button onclick="clearCanvas()">Clear Canvas</button>
+    </main>
+</body>
+</html>

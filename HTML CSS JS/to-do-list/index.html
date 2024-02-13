@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    
+    <h1 id="myHeader">TO DO List</h1>
+    <input type="button" class="addButton" value="Add" onclick="addTask()">
+    <input type="text" id="input" placeholder="enter text...">
+
+    <hr>
+    <ul id="tasks">
+        <li>
+        <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
+        <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
+        <input type="button" class="important" onclick="important(this.parentNode)" value="!" />
+        <span>make todo list</span>
+        </li>
+    </ul>
+    <hr>
+
+    <div>
+        <button onclick="doAbout()">About</button>
+        <div id="divAbout">Автор - Данилевич Олег</div>
+    </div>
+
+</body>
+</html>

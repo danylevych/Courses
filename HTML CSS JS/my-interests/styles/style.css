@@ -1,0 +1,68 @@
+.title {
+    margin: 0;
+    margin-bottom: 10;
+    padding: 10px;
+
+    text-align: center;
+    font-size: 3em;
+
+    color: orange;
+    background-color: aquamarine;
+
+    border: 2px solid rgb(85, 255, 198);
+    border-radius: 20px;
+
+    
+}
+
+div {
+    box-shadow: 10px -10px 10px red;
+}
+.doramasReview {
+    margin: 0;
+    padding: 0;
+    background-color: #faebd7;
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    
+    position: absolute;
+    left: em;
+}
+
+.doramasReview h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.doramasReview table {
+    text-align: left;
+    padding: 0em 1em;
+    border-radius: 20px;
+    border-collapse: collapse;
+    
+    border-radius: 20px;
+}
+
+.doramasReview table th, td, tr{
+    padding: 1em;
+    border: 2px solid #f3c891;
+    
+}
+
+.doramasReview table tr th{
+    background-color: #ffc072;
+    text-align: center;
+    padding: 0.5em;
+    margin: 0;
+}
+
+.doramasReview table tr td ul {
+    margin-top: 0.1em;
+    font-style: italic;
+}
+
+.bookTop {
+
+}

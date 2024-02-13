@@ -1,0 +1,19 @@
+header h1 {
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+canvas {
+    border: 1.5px solid lightgray;
+    border-radius: 7px;
+}
+
+input[type="file"] {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

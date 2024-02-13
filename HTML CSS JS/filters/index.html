@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/scripts.js"></script>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Filters for image</h1>
+    </header>
+
+    <main>
+        <hr>
+        <div class="centerAlign">
+            <canvas id="imageArea"></canvas>
+        </div>
+        <hr>
+        <div class="centerAlign">
+            <label for="fileInput">Select image file:</label>
+            <input id="fileInput" type="file" accept="image/*" onchange="loadImage()">
+        </div>
+        <br>
+        <div id="filterContainer" class="centerColomn">
+            <button onclick="doRed()">Make Red</button>
+            <button onclick="doGray()">Make Gray</button>
+            <button onclick="doWave()">Make Wave</button>
+            <button onclick="doBlur()">Make Blure</button>
+            <button onclick="doRainbow()">Make Rainbow</button>
+            <button onclick="resetFilter()">Reset Filter</button>
+        </div>
+    </main>
+
+</body>
+</html>

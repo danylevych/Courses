@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    margin: 25px 25px 25px 25px;
+    padding: 10px 10px 10px 10px;
+}
+
+button {
+    border-radius: 7px;
+    font-size: medium;
+    margin-left: 15px;
+    width: 150px;
+}
+
+input[type="color"]{
+    margin-left: 15px;
+    border-radius: 7px;
+}
+
+canvas {
+    margin: 30px 15px 30px 15px;
+    padding: 30px 15px 30px 15px;
+    border: 2px solid grey;
+    height: 250px;
+}
