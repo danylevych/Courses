@@ -48,6 +48,10 @@ public:
     */
     void insertOrder(OrderBookEntry& order);
     
+    /**
+     *  Match the binds and asks.
+    */
+    std::vector<OrderBookEntry> matchAskAndBidOrders(const std::string& product, const std::string& timestamp);
 public:
     /**
      *  Return the highest price of the product.

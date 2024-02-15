@@ -31,3 +31,13 @@ OrderBookType OrderBookEntry::stringToOrderBookType(std::string s)
   }
   return OrderBookType::unknown;
 }
+
+bool OrderBookEntry::compareByPraceAsc(const OrderBookEntry &left, const OrderBookEntry &right)
+{
+    return left.price < right.price;
+}
+
+bool OrderBookEntry::compareByPraceDesc(const OrderBookEntry &left, const OrderBookEntry &right)
+{
+    return left.price > right.price;
+}

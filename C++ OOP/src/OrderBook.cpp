@@ -90,6 +90,51 @@ void OrderBook::insertOrder(OrderBookEntry &order)
     std::sort(orders.begin(), orders.end());
 }
 
+std::vector<OrderBookEntry> OrderBook::matchAskAndBidOrders(const std::string &product, const std::string &timestamp)
+{
+    std::vector<OrderBookEntry> sales;
+    std::vector<OrderBookEntry> asks = getOrders(OrderBookType::ask, product, timestamp);
+    std::vector<OrderBookEntry> bids = getOrders(OrderBookType::bid, product, timestamp);
+
+    for (OrderBookEntry& ask : asks)
+    {
+        for (OrderBookEntry& bid : bids)
+        {
+            if (bid.price >= ask.price) // We have a match.
+            {
+                OrderBookEntry sale { ask.price, 0, timestamp, product, OrderBookType::sale };
+
+                if (bid.amount == ask.amount) // bid completely clears ask.
+                {
+                    sale.amount = ask.amount;
+                    sales.push_back(sale);
+                    bid.amount = 0;
+                    break;
+                }
+
+                if (bid.amount > ask.amount) // ask is completely gone the bid.
+                {
+                    sale.amount = ask.amount;
+                    sales.push_back(sale);
+                    bid.amount = bid.amount - ask.amount;
+                    break;
+                }
+
+                if (bid.amount < ask.amount) // bid is completely gone.
+                {
+                    sale.amount = bid.amount;
+                    sales.push_back(sale);
+                    ask.amount = ask.amount - bid.amount;
+                    bid.amount = 0;
+                    continue;
+                }
+            }
+        }
+    }
+
+    return sales;
+}
+
 double OrderBook::getHighPrice(const std::vector<OrderBookEntry> &orders)
 {
     // Find the highest price.

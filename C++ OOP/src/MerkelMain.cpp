@@ -6,7 +6,7 @@
 #include <limits>
 
 MerkelMain::MerkelMain()
-    : orders("20200317.csv")
+    : orders("test.csv")
 {   }
 
 void MerkelMain::init()
@@ -153,6 +153,13 @@ void MerkelMain::printWallet()
 void MerkelMain::gotoNextTimeframe()
 {
     std::cout << "Going to next time frame. " << std::endl;
+    auto sales = orders.matchAskAndBidOrders("ETH/BTC", currentTime);
+    std::cout << "Size: " << sales.size() << std::endl;
+    for (const auto& item : sales)
+    {
+        std::cout << "Price: " << item.price << " amount " << item.amount << std::endl;
+    }
+
     currentTime = orders.getNextTime(currentTime);
 }
 
@@ -180,7 +187,7 @@ int MerkelMain::getUserOption()
 
 void MerkelMain::processUserOption(int userOption)
 {
-    system("cls"); // Clear input.
+    //system("cls"); // Clear input.
 
     if (userOption == 0) // bad input
     {
@@ -211,5 +218,5 @@ void MerkelMain::processUserOption(int userOption)
         gotoNextTimeframe();
     }
     
-    system("pause"); // Wait till user press any key.
+    //system("pause"); // Wait till user press any key.
 }
